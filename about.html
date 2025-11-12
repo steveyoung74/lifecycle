@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Lifecycle Systems</title>
+    <meta name="description" content="Learn about the founder's journey from JPMorgan to Evelyn Partners and why independent wealth managers need enterprise-grade automation.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .story-section {
+            padding: 5rem 0;
+            background: var(--bg-white);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-content h2 {
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .story-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .journey-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .journey-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .journey-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .journey-item {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .journey-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .journey-title h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .journey-role {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .journey-company {
+            text-align: right;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .journey-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .journey-description ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .journey-description li {
+            margin-bottom: 0.8rem;
+        }
+
+        .expertise-section {
+            padding: 5rem 0;
+            background: var(--bg-white);
+        }
+
+        .expertise-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        .expertise-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .expertise-card ul {
+            list-style: none;
+        }
+
+        .expertise-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .expertise-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .philosophy-section {
+            padding: 5rem 0;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .philosophy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .philosophy-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .philosophy-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .journey-header {
+                flex-direction: column;
+            }
+
+            .journey-company {
+                text-align: left;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Lifecycle Systems</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="cta-button">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Lifecycle Systems</h1>
+            <p class="hero-subtitle">Enterprise expertise made accessible to independent firms</p>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>Why I Started Lifecycle Systems</h2>
+                <p>After spending years solving operational problems at JPMorgan and Evelyn Partners—organizations managing billions in assets—I saw a recurring pattern: the most expensive, time-consuming challenges weren't technology problems. They were workflow problems.</p>
+
+                <p>At Evelyn Partners, one of the UK's largest integrated wealth management and professional services groups, I led automation initiatives that transformed how we handled everything from major incidents to client onboarding. The results were dramatic—operations that previously took weeks now happened in days, and teams that were drowning in administrative work could finally focus on clients.</p>
+
+                <p>But here's what struck me: the smaller wealth management firms I spoke with were facing the exact same problems—disjointed systems, manual handoffs, bottlenecks in the client lifecycle—but they didn't have access to the same caliber of solutions. They'd get quoted £100,000+ by the big consultancies, who'd then take 12-18 months to deliver something that still didn't quite fit.</p>
+
+                <p>That's the gap Lifecycle Systems fills. I bring the same institutional-grade automation and AI tools I deployed at £2.5bn+ firms, but tailored for independent wealth managers at a fraction of the cost and timeline. You get enterprise capability without enterprise complexity or enterprise pricing.</p>
+
+                <p>Independent firms shouldn't have to choose between exceptional client service and operational efficiency. With the right systems, you can have both.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey-section">
+        <div class="container">
+            <h2>Professional Background</h2>
+            <div class="journey-timeline">
+                
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <div class="journey-title">
+                            <h3>Lifecycle Systems</h3>
+                            <div class="journey-role">Founder</div>
+                        </div>
+                        <div class="journey-company">2024 - Present</div>
+                    </div>
+                    <div class="journey-description">
+                        <p>Helping independent wealth managers implement enterprise-grade automation and AI tools to streamline their client lifecycle operations.</p>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <div class="journey-title">
+                            <h3>Evelyn Partners</h3>
+                            <div class="journey-role">Automation & AI Lead</div>
+                        </div>
+                        <div class="journey-company">Previous Role</div>
+                    </div>
+                    <div class="journey-description">
+                        <p>Led operational transformation initiatives at one of the UK's largest integrated wealth management and professional services groups, serving over 186,000 clients with £50+ billion in assets under management and administration.</p>
+                        <ul>
+                            <li>Designed and implemented automation solutions for the complete client lifecycle—from lead generation through onboarding</li>
+                            <li>Solved the "gated business lifecycle" challenge that had been costing the firm millions in operational inefficiency</li>
+                            <li>Led AI integration projects to streamline document generation, compliance checking, and client communications</li>
+                            <li>Reduced client onboarding time by 87% while maintaining regulatory compliance</li>
+                            <li>Created repeatable frameworks that could be deployed across multiple business units</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <div class="journey-title">
+                            <h3>JPMorgan Chase</h3>
+                            <div class="journey-role">Major Incident Product Owner</div>
+                        </div>
+                        <div class="journey-company">Previous Role</div>
+                    </div>
+                    <div class="journey-description">
+                        <p>Led critical operational initiatives at one of the world's largest financial institutions.</p>
+                        <ul>
+                            <li>Managed major incident response systems for markets and execution divisions</li>
+                            <li>Led design teams for ServiceNow migration, improving employee experience and operational efficiency</li>
+                            <li>Coordinated cross-functional teams during high-pressure situations</li>
+                            <li>Built systems to ensure regulatory compliance while maintaining operational speed</li>
+                            <li>Developed expertise in financial services operations at institutional scale</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise-section">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                
+                <div class="expertise-card">
+                    <h3>Financial Services Operations</h3>
+                    <ul>
+                        <li>Wealth management workflows</li>
+                        <li>Client lifecycle management</li>
+                        <li>Regulatory compliance systems</li>
+                        <li>Risk management frameworks</li>
+                        <li>Document generation and processing</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Automation & AI</h3>
+                    <ul>
+                        <li>Workflow automation design</li>
+                        <li>AI-powered document processing</li>
+                        <li>Intelligent lead qualification</li>
+                        <li>Automated compliance checking</li>
+                        <li>Client communication automation</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Systems Integration</h3>
+                    <ul>
+                        <li>CRM integration and optimization</li>
+                        <li>ServiceNow implementation</li>
+                        <li>Legacy system modernization</li>
+                        <li>API design and development</li>
+                        <li>Data flow orchestration</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Process Optimization</h3>
+                    <ul>
+                        <li>Business process mapping</li>
+                        <li>Bottleneck identification</li>
+                        <li>Efficiency measurement</li>
+                        <li>ROI analysis and projection</li>
+                        <li>Change management</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-content">
+                <h2>My Philosophy</h2>
+                <p>Technology should work for you, not the other way around. The best automation is invisible—it removes friction without creating complexity.</p>
+                <p>Independent wealth managers have the agility to implement changes quickly. You don't need committees and year-long approval cycles. That's your competitive advantage, and the right automation amplifies it.</p>
+                <p>My job isn't to sell you the most sophisticated solution. It's to solve your most expensive problems as quickly and effectively as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Talk About Your Practice</h2>
+                <p>Whether you're just exploring automation or ready to transform your operations, I'd be happy to discuss your specific challenges.</p>
+                <a href="contact.html" class="button button-primary button-large">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lifecycle Systems</h3>
+                    <p>Enterprise automation for independent wealth managers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Operational Assessment</a></li>
+                        <li><a href="services.html">Full Implementation</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>Glasgow, Scotland<br>Serving UK financial services firms</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lifecycle Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

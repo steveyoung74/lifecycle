@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - Lifecycle Systems</title>
+    <meta name="description" content="Real results from wealth management firms that have transformed their client lifecycle operations.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .case-studies-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .case-studies-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-studies-intro {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--bg-white);
+        }
+
+        .case-studies-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .case-study-full {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .case-study-header {
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .case-study-label {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-header h2 {
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .case-study-meta {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .results-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .result-box {
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .case-study-section {
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .case-study-section h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-section h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-section p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .case-study-section ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .case-study-section li {
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .before-box, .after-box {
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .before-box {
+            background: #ffebee;
+            border-left: 4px solid #c62828;
+        }
+
+        .after-box {
+            background: #e8f5e9;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .before-box h5, .after-box h5 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .before-box h5 {
+            color: #c62828;
+        }
+
+        .after-box h5 {
+            color: var(--success-color);
+        }
+
+        .timeline-visual {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            align-items: start;
+        }
+
+        .timeline-week {
+            font-weight: 700;
+            color: var(--primary-color);
+            min-width: 100px;
+        }
+
+        .quote-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent-color);
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .quote-attribution {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Lifecycle Systems</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="cta-button">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="case-studies-hero">
+        <div class="container">
+            <h1>Case Studies</h1>
+            <p class="hero-subtitle">Real results from firms that transformed their operations</p>
+        </div>
+    </section>
+
+    <section class="case-studies-intro">
+        <div class="container">
+            <p>These are real implementations with measurable outcomes. Every statistic, timeline, and result is based on actual deployments at financial services firms.</p>
+        </div>
+    </section>
+
+    <section class="case-study-full">
+        <div class="container">
+            
+            <div class="case-study-header">
+                <span class="case-study-label">Featured Case Study</span>
+                <h2>Transforming Client Onboarding at a £2.5bn Wealth Manager</h2>
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Client Type</span>
+                        <span class="meta-value">Large Wealth Manager</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Assets Under Management</span>
+                        <span class="meta-value">£2.5 billion</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Implementation Timeline</span>
+                        <span class="meta-value">8 weeks</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Investment</span>
+                        <span class="meta-value">£285,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-highlight">
+                <div class="result-box">
+                    <div class="result-number">87%</div>
+                    <div class="result-label">Reduction in onboarding time</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">743%</div>
+                    <div class="result-label">Return on investment</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">£2.1M</div>
+                    <div class="result-label">Annual operational savings</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">3x</div>
+                    <div class="result-label">Client capacity increase</div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h3>The Challenge</h3>
+                <p>A well-established wealth management firm with £2.5 billion in assets under management was experiencing significant operational strain. Their client onboarding process, which had evolved organically over two decades, had become a major bottleneck limiting growth.</p>
+
+                <h4>The Pain Points</h4>
+                <ul>
+                    <li><strong>22-day average onboarding time:</strong> From signed agreement to first portfolio review, the process took 3-4 weeks, creating frustration for new high-net-worth clients accustomed to seamless digital experiences</li>
+                    <li><strong>High manual workload:</strong> Each onboarding required 47 hours of combined staff time across advisors, operations, and compliance teams</li>
+                    <li><strong>Inconsistent client experience:</strong> Without standardized workflows, quality and timeline varied significantly based on which team handled the onboarding</li>
+                    <li><strong>Compliance risk:</strong> Manual document handling and checklist management created gaps in audit trails and increased regulatory risk</li>
+                    <li><strong>Lost revenue opportunities:</strong> The operations team could only handle 30-35 new clients per quarter, directly limiting the firm's growth</li>
+                    <li><strong>Staff burnout:</strong> Operations team working excessive hours during busy periods, with high turnover in administrative roles</li>
+                </ul>
+
+                <p>The firm had tried multiple fixes—hiring more staff, implementing new CRM systems, creating more detailed checklists—but the fundamental workflow problems remained. The leadership team recognized they needed a systematic transformation, not incremental improvements.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h3>The Approach</h3>
+                <p>Rather than a complete technology overhaul, we focused on intelligent workflow automation that worked with their existing systems while modernizing the processes behind them.</p>
+
+                <h4>Phase 1: Discovery and Process Mapping (Week 1)</h4>
+                <p>We conducted comprehensive interviews with every role involved in onboarding:</p>
+                <ul>
+                    <li>Front-line advisors who initiated client relationships</li>
+                    <li>Operations staff who handled documentation and account setup</li>
+                    <li>Compliance officers who reviewed and approved onboardings</li>
+                    <li>Portfolio managers who took over post-onboarding</li>
+                </ul>
+                <p>Through process observation and time-motion analysis, we identified 23 distinct handoff points and 17 different systems involved in a single client onboarding. The analysis revealed that 68% of onboarding time was spent waiting for information, not actually processing it.</p>
+
+                <h4>Phase 2: Solution Design (Weeks 2-3)</h4>
+                <p>We designed an integrated workflow that automated the repetitive tasks while keeping human oversight on critical decision points:</p>
+                <ul>
+                    <li><strong>Intelligent document processing:</strong> AI-powered extraction of data from client documents, automatically populating CRM and portfolio management systems</li>
+                    <li><strong>Automated workflow orchestration:</strong> Smart routing of tasks to appropriate team members with real-time status visibility</li>
+                    <li><strong>Compliance automation:</strong> Automated AML checks, risk assessment scoring, and regulatory documentation</li>
+                    <li><strong>Client communication automation:</strong> Personalized status updates, document requests, and welcome sequences</li>
+                    <li><strong>Integration layer:</strong> Seamless data flow between CRM, portfolio management, compliance, and document management systems</li>
+                </ul>
+
+                <h4>Phase 3: Build and Integration (Weeks 4-6)</h4>
+                <p>Implementation focused on minimal disruption to ongoing operations:</p>
+                <ul>
+                    <li>Built automation workflows in parallel environment</li>
+                    <li>Created custom integrations between existing systems</li>
+                    <li>Developed fallback procedures for edge cases</li>
+                    <li>Implemented comprehensive audit logging for compliance</li>
+                </ul>
+
+                <h4>Phase 4: Testing and Training (Week 7)</h4>
+                <p>Rigorous testing with real historical cases:</p>
+                <ul>
+                    <li>Processed 50 historical onboarding cases through new system</li>
+                    <li>Identified and resolved edge cases</li>
+                    <li>Trained 23 staff members across all affected teams</li>
+                    <li>Created comprehensive documentation and troubleshooting guides</li>
+                </ul>
+
+                <h4>Phase 5: Deployment (Week 8)</h4>
+                <p>Phased rollout to minimize risk:</p>
+                <ul>
+                    <li>Started with 5 new clients in week 1</li>
+                    <li>Expanded to 50% of new clients in week 2</li>
+                    <li>Full deployment by week 3</li>
+                    <li>Maintained parallel manual process as safety net for first month</li>
+                </ul>
+            </div>
+
+            <div class="case-study-section">
+                <h3>The Transformation: Before and After</h3>
+
+                <div class="before-after">
+                    <div class="before-box">
+                        <h5>Before Automation</h5>
+                        <ul>
+                            <li>22 days average onboarding time</li>
+                            <li>47 hours of staff time per client</li>
+                            <li>23 manual handoff points</li>
+                            <li>17 separate systems to update</li>
+                            <li>30-35 clients onboarded per quarter</li>
+                            <li>Inconsistent client experience</li>
+                            <li>High compliance risk from manual processes</li>
+                            <li>Staff working overtime during busy periods</li>
+                        </ul>
+                    </div>
+
+                    <div class="after-box">
+                        <h5>After Automation</h5>
+                        <ul>
+                            <li>3 days average onboarding time</li>
+                            <li>6 hours of staff time per client</li>
+                            <li>3 decision points requiring human input</li>
+                            <li>Seamless integration across all systems</li>
+                            <li>100+ clients onboarded per quarter</li>
+                            <li>Consistent, premium experience</li>
+                            <li>Complete audit trails and compliance documentation</li>
+                            <li>Normal working hours maintained</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-section">
+                <h3>The Results</h3>
+
+                <h4>Operational Efficiency</h4>
+                <ul>
+                    <li><strong>87% reduction in onboarding time:</strong> From 22 days to 3 days average</li>
+                    <li><strong>87% reduction in staff hours:</strong> From 47 hours to 6 hours per onboarding</li>
+                    <li><strong>3x increase in capacity:</strong> From 30-35 clients per quarter to 100+ with same team size</li>
+                    <li><strong>95% reduction in data entry errors:</strong> Automated validation and cross-system checks</li>
+                    <li><strong>100% compliance documentation:</strong> Complete audit trails for every onboarding</li>
+                </ul>
+
+                <h4>Financial Impact</h4>
+                <ul>
+                    <li><strong>£2.1M annual operational savings:</strong> From reduced labor costs and increased efficiency</li>
+                    <li><strong>£3.8M additional revenue capacity:</strong> Ability to onboard 3x more clients without additional staff</li>
+                    <li><strong>£285,000 implementation investment:</strong> Including discovery, build, and training</li>
+                    <li><strong>743% ROI:</strong> First-year return on investment</li>
+                    <li><strong>3.4 month payback period:</strong> Investment recovered in first quarter</li>
+                </ul>
+
+                <h4>Client Experience</h4>
+                <ul>
+                    <li><strong>42% increase in Net Promoter Score:</strong> Clients impressed by speed and professionalism</li>
+                    <li><strong>23% reduction in client support inquiries:</strong> Proactive communication eliminated most questions</li>
+                    <li><strong>Real-time status visibility:</strong> Clients could track progress through personalized portal</li>
+                </ul>
+
+                <h4>Staff Impact</h4>
+                <ul>
+                    <li><strong>78% reduction in overtime hours:</strong> Eliminated need for extended hours during busy periods</li>
+                    <li><strong>45% improvement in staff satisfaction:</strong> Team could focus on high-value work instead of data entry</li>
+                    <li><strong>Zero turnover in operations team:</strong> In the year following implementation (previously 30% annual turnover)</li>
+                </ul>
+            </div>
+
+            <div class="case-study-section">
+                <h3>Key Success Factors</h3>
+
+                <h4>1. Working With Existing Systems</h4>
+                <p>Rather than replacing the firm's CRM and portfolio management systems (which would have cost millions and taken years), we built an intelligent integration layer. This preserved their technology investments while modernizing the workflows between systems.</p>
+
+                <h4>2. Phased Implementation</h4>
+                <p>The 8-week timeline was aggressive but achievable because we focused on workflow automation first, then added AI capabilities incrementally. This allowed the team to see quick wins while building confidence in the new system.</p>
+
+                <h4>3. Human-in-the-Loop Design</h4>
+                <p>We automated the repetitive tasks but kept humans in control of critical decisions. Advisors still reviewed client risk profiles and investment recommendations; they just didn't need to manually input data or chase down documents.</p>
+
+                <h4>4. Compliance First</h4>
+                <p>By building comprehensive audit logging and automated compliance checks from day one, we actually reduced regulatory risk while improving efficiency. The compliance team became champions of the new system.</p>
+
+                <h4>5. Change Management</h4>
+                <p>We invested heavily in training and created detailed documentation. Every team member understood not just how to use the new system, but why it was designed the way it was. This drove adoption and minimized resistance.</p>
+            </div>
+
+            <div class="quote-box">
+                "The transformation exceeded our expectations. We went from being capacity-constrained to having room to grow, and our clients notice the difference. The onboarding experience went from 'good enough' to genuinely impressive. What surprised us most was how quickly we saw results—meaningful impact within weeks, not months."
+                <div class="quote-attribution">— Chief Operating Officer</div>
+            </div>
+
+            <div class="case-study-section">
+                <h3>Lessons for Independent Firms</h3>
+                <p>While this case study involves a large firm, the principles and many of the specific solutions apply directly to independent wealth managers:</p>
+
+                <h4>You Don't Need Enterprise Scale</h4>
+                <p>The same tools and workflows that transformed this £2.5bn firm can be implemented at practices of any size. In fact, smaller firms often see results faster because they have fewer legacy systems and less organizational complexity.</p>
+
+                <h4>The Problems Are Universal</h4>
+                <p>Whether you manage £50 million or £5 billion, the fundamental challenges are the same: manual handoffs, disconnected systems, compliance burden, and limited capacity to grow. The solutions scale down effectively.</p>
+
+                <h4>ROI Scales Proportionally</h4>
+                <p>While absolute numbers differ, the percentage improvements are similar. A 10-person practice can achieve the same 87% reduction in onboarding time and 3x capacity increase—it just means different absolute numbers.</p>
+
+                <h4>Timeline Advantage</h4>
+                <p>Independent firms often move faster than large institutions. This 8-week implementation could be 4-6 weeks for a smaller practice with simpler technology infrastructure and faster decision-making.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Similar Results?</h2>
+                <p>Start with our £2,500 Operational Efficiency Assessment to see what's possible for your practice.</p>
+                <a href="contact.html" class="button button-primary button-large">Book Your Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lifecycle Systems</h3>
+                    <p>Enterprise automation for independent wealth managers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Operational Assessment</a></li>
+                        <li><a href="services.html">Full Implementation</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>Glasgow, Scotland<br>Serving UK financial services firms</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lifecycle Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

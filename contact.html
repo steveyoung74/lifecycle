@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Lifecycle Systems</title>
+    <meta name="description" content="Get in touch to discuss how we can help automate your client lifecycle.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            padding: 5rem 0;
+            background: var(--bg-white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            padding: 2rem 0;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-methods {
+            margin-top: 3rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .contact-method-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-method-content p {
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .contact-method-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-method-content a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-container {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .contact-form-container h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-submit:hover {
+            background: var(--secondary-color);
+        }
+
+        .form-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .next-steps {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .next-steps-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .next-steps-content h2 {
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-item {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .step-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Lifecycle Systems</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="cta-button">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p class="hero-subtitle">Let's discuss how we can help transform your client lifecycle</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                
+                <div class="contact-info">
+                    <h2>Start the Conversation</h2>
+                    <p>Whether you're ready to book an Operational Efficiency Assessment or just want to explore what's possible, I'd be happy to discuss your specific situation.</p>
+                    <p>Most initial conversations take 20-30 minutes. We'll discuss your current challenges, what you've already tried, and whether automation makes sense for your practice right now.</p>
+                    <p>There's no pressure—just an honest conversation about your operations and what might help.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📧</div>
+                            <div class="contact-method-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:hello@lifecyclesystems.co.uk">hello@lifecyclesystems.co.uk</a></p>
+                                <p>I typically respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📍</div>
+                            <div class="contact-method-content">
+                                <h3>Location</h3>
+                                <p>Based in Glasgow, Scotland</p>
+                                <p>Serving UK financial services firms</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">⏱️</div>
+                            <div class="contact-method-content">
+                                <h3>Availability</h3>
+                                <p>Monday - Friday, 9am - 6pm GMT</p>
+                                <p>Flexible for initial calls</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Firm Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="aum">Assets Under Management</label>
+                            <select id="aum" name="aum">
+                                <option value="">Select range...</option>
+                                <option value="under-50m">Under £50M</option>
+                                <option value="50m-200m">£50M - £200M</option>
+                                <option value="200m-500m">£200M - £500M</option>
+                                <option value="500m-1b">£500M - £1B</option>
+                                <option value="over-1b">Over £1B</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In</label>
+                            <select id="interest" name="interest">
+                                <option value="">Select one...</option>
+                                <option value="assessment">Operational Efficiency Assessment (£2,500)</option>
+                                <option value="implementation">Full Implementation (£20-30K)</option>
+                                <option value="discussion">Just exploring options</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell Me About Your Situation *</label>
+                            <textarea id="message" name="message" required placeholder="What are your biggest operational challenges? What have you tried so far?"></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">Send Message</button>
+                        
+                        <p class="form-note">* I'll respond within 24 hours to schedule a call. Your information is kept confidential.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="next-steps">
+        <div class="container">
+            <div class="next-steps-content">
+                <h2>What Happens Next?</h2>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>Initial Call</h3>
+                        <p>20-30 minute conversation about your practice and current challenges</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>Assessment (Optional)</h3>
+                        <p>£2,500 two-day deep dive if you want detailed analysis</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>Decision Point</h3>
+                        <p>You decide if and when to proceed—no pressure</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3>Implementation</h3>
+                        <p>6-8 weeks to transform your client lifecycle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lifecycle Systems</h3>
+                    <p>Enterprise automation for independent wealth managers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Operational Assessment</a></li>
+                        <li><a href="services.html">Full Implementation</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>Glasgow, Scotland<br>Serving UK financial services firms</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lifecycle Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Basic form handling - you'll want to replace this with your actual form submission logic
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form. In production, this would send your message and show a proper confirmation.');
+            // In production, you would send this to your email service or form handler
+        });
+    </script>
+</body>
+</html>

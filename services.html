@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Lifecycle Systems</title>
+    <meta name="description" content="From discovery to full implementation, we help wealth managers automate their client lifecycle.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .services-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-intro {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--bg-white);
+        }
+
+        .services-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .service-offerings {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .offering {
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .offering-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .offering-title {
+            flex: 1;
+        }
+
+        .offering-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .offering-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .offering-price {
+            text-align: right;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .price-detail {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .offering-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .offering-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .offering-section ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .offering-section li {
+            padding: 0.6rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .offering-section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: 700;
+        }
+
+        .timeline {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            min-width: 100px;
+        }
+
+        .guarantee-box {
+            background: #e8f5e9;
+            border-left: 4px solid var(--success-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 4px;
+        }
+
+        .guarantee-box h4 {
+            color: var(--success-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .process-section {
+            padding: 4rem 0;
+            background: var(--bg-white);
+        }
+
+        .process-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .offering-content {
+                grid-template-columns: 1fr;
+            }
+
+            .offering-header {
+                flex-direction: column;
+            }
+
+            .offering-price {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Lifecycle Systems</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="cta-button">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="services-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p class="hero-subtitle">From discovery to full implementation</p>
+        </div>
+    </section>
+
+    <section class="services-intro">
+        <div class="container">
+            <p>We offer two pathways: start with a low-risk discovery engagement to identify opportunities, or jump straight into a full lifecycle transformation if you already know what needs fixing.</p>
+        </div>
+    </section>
+
+    <section class="service-offerings">
+        <div class="container">
+            
+            <!-- Offering 1: Assessment -->
+            <div class="offering">
+                <div class="offering-header">
+                    <div class="offering-title">
+                        <h2>Operational Efficiency Assessment</h2>
+                        <p class="offering-subtitle">Understand exactly where you're losing time and money</p>
+                    </div>
+                    <div class="offering-price">
+                        <div class="price-tag">£2,500</div>
+                        <div class="price-detail">2-day engagement</div>
+                    </div>
+                </div>
+
+                <div class="offering-content">
+                    <div class="offering-section">
+                        <h3>What You Get</h3>
+                        <ul>
+                            <li>Comprehensive process mapping of your entire client lifecycle</li>
+                            <li>Identification of bottlenecks, manual handoffs, and inefficiencies</li>
+                            <li>Quantified analysis of time spent on each lifecycle stage</li>
+                            <li>Custom automation blueprint tailored to your practice</li>
+                            <li>ROI projections for recommended improvements</li>
+                            <li>Technology recommendations that integrate with your existing systems</li>
+                            <li>Quick-win opportunities you can implement immediately</li>
+                            <li>Detailed implementation roadmap with phased approach</li>
+                        </ul>
+
+                        <h3>Perfect For</h3>
+                        <ul>
+                            <li>Practices considering automation but unsure where to start</li>
+                            <li>Teams experiencing growth pains but not ready for major investment</li>
+                            <li>Firms wanting third-party validation of their operational strategy</li>
+                            <li>Advisors seeking a clear, unbiased analysis of their processes</li>
+                        </ul>
+                    </div>
+
+                    <div class="offering-section">
+                        <h3>The Process</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-label">Day 1 Morning:</div>
+                                <div>Stakeholder interviews and current-state documentation</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Day 1 Afternoon:</div>
+                                <div>Process observation and data gathering</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Day 2 Morning:</div>
+                                <div>Analysis and solution design</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Day 2 Afternoon:</div>
+                                <div>Presentation of findings and recommendations</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Within 48 hours:</div>
+                                <div>Detailed written report and implementation roadmap</div>
+                            </div>
+                        </div>
+
+                        <h3>What Happens Next</h3>
+                        <p>You'll have everything you need to make an informed decision about automation—whether you proceed with us, implement internally, or choose another partner. No obligation to continue.</p>
+                    </div>
+                </div>
+
+                <div class="guarantee-box">
+                    <h4>Risk-Free Guarantee</h4>
+                    <p>If we don't identify at least £25,000 in annual savings opportunities during the assessment, you don't pay. We're that confident in what we'll find.</p>
+                </div>
+
+                <div class="cta-box">
+                    <a href="contact.html" class="button button-primary">Book Your Assessment</a>
+                </div>
+            </div>
+
+            <!-- Offering 2: Full Implementation -->
+            <div class="offering">
+                <div class="offering-header">
+                    <div class="offering-title">
+                        <h2>Full Lifecycle System Implementation</h2>
+                        <p class="offering-subtitle">End-to-end automation of your client journey</p>
+                    </div>
+                    <div class="offering-price">
+                        <div class="price-tag">£20,000–£30,000</div>
+                        <div class="price-detail">6-8 week implementation</div>
+                    </div>
+                </div>
+
+                <div class="offering-content">
+                    <div class="offering-section">
+                        <h3>What's Included</h3>
+                        <ul>
+                            <li>Complete automation of all five lifecycle stages</li>
+                            <li>Custom workflow design and implementation</li>
+                            <li>AI-powered tools for lead qualification, document generation, and client communications</li>
+                            <li>Integration with your existing CRM, portfolio management, and back-office systems</li>
+                            <li>Custom dashboards for pipeline visibility and performance tracking</li>
+                            <li>Comprehensive team training and documentation</li>
+                            <li>30 days of post-launch support and optimization</li>
+                            <li>Quarterly check-ins for the first year</li>
+                        </ul>
+
+                        <h3>Expected Outcomes</h3>
+                        <ul>
+                            <li>70-85% reduction in onboarding time</li>
+                            <li>40-60% decrease in administrative workload</li>
+                            <li>30-50% improvement in lead conversion</li>
+                            <li>Real-time visibility into your entire pipeline</li>
+                            <li>Capacity to handle 2-3x more clients with existing team</li>
+                            <li>Consistent, audit-ready compliance documentation</li>
+                            <li>ROI typically achieved within 6-9 months</li>
+                        </ul>
+                    </div>
+
+                    <div class="offering-section">
+                        <h3>Implementation Timeline</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-label">Week 1:</div>
+                                <div>Discovery and requirements gathering (if not already completed)</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Weeks 2-3:</div>
+                                <div>System design and workflow configuration</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Weeks 4-5:</div>
+                                <div>Build and integration with existing systems</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Week 6:</div>
+                                <div>Testing with real scenarios and edge cases</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Week 7:</div>
+                                <div>Team training and soft launch</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">Week 8:</div>
+                                <div>Full deployment and optimization</div>
+                            </div>
+                        </div>
+
+                        <h3>Pricing Variables</h3>
+                        <p>Final investment depends on:</p>
+                        <ul>
+                            <li>Number of advisors and staff using the system</li>
+                            <li>Complexity of existing technology stack</li>
+                            <li>Number of custom integrations required</li>
+                            <li>Extent of current process documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <a href="contact.html" class="button button-primary">Start the Conversation</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2>Why Our Approach Works</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Financial Services Expertise</h3>
+                    <p>Built by someone who's solved these exact problems at £2.5bn+ firms. We understand compliance, regulatory requirements, and the nuances of wealth management.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>No Rip-and-Replace</h3>
+                    <p>We work with your existing systems. No need to change CRMs or portfolio management tools—we make what you have work better.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Rapid Deployment</h3>
+                    <p>6-8 weeks from start to finish versus 6-12 months with traditional consultants. Your team sees benefits in weeks, not quarters.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Proven Systems</h3>
+                    <p>Every workflow and automation has been battle-tested at institutional scale. You get proven solutions, not experiments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Not Sure Which Option Is Right?</h2>
+                <p>Most firms start with the Operational Efficiency Assessment. It's low-risk, high-value, and gives you complete clarity on what's possible.</p>
+                <a href="contact.html" class="button button-primary button-large">Book a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lifecycle Systems</h3>
+                    <p>Enterprise automation for independent wealth managers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Operational Assessment</a></li>
+                        <li><a href="services.html">Full Implementation</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>Glasgow, Scotland<br>Serving UK financial services firms</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lifecycle Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
