@@ -238,6 +238,9 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">lifecycle<span class="logo2">systems</span></a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    ☰
+                </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -416,11 +419,26 @@
     </footer>
 
     <script>
-        // Basic form handling - you'll want to replace this with your actual form submission logic
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! This is a demo form. In production, this would send your message and show a proper confirmation.');
-            // In production, you would send this to your email service or form handler
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-wrapper')) {
+                navMenu.classList.remove('active');
+            }
+        });
+        
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
         });
     </script>
 </body>
