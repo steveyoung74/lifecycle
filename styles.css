@@ -9,15 +9,15 @@
 }
 
 :root {
-    --primary-color: #1e3a5f;
-    --secondary-color: #2c5f8d;
-    --accent-color: #3a7ca5;
+    --primary-color: #293241;
+    --secondary-color: #3D5A80;
+    --accent-color: #98C1D9;
     --text-dark: #1a1a1a;
     --text-light: #4a4a4a;
-    --bg-light: #f8f9fa;
+    --bg-light: #E0FBFC;
     --bg-white: #ffffff;
     --border-color: #e0e0e0;
-    --success-color: #2d6a4f;
+    --success-color: #EE6C4D;
     --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
